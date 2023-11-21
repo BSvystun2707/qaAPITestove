@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "test": "npm run clean-reports && mocha test/**/*.test.js --reporter mochawesome",
+        "clean-reports": "rimraf mochawesome-report",
+        "generate-report": "npx marge mochawesome-report/*.json --reportDir=report"
+    },
+    "dependencies": {
+        "axios": "^1.6.2"
+    },
+    "devDependencies": {
+        "mocha": "^10.2.0",
+        "mochawesome": "^7.1.3",
+        "rimraf": "^5.0.5"
+    }
+}
